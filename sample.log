@@ -1,0 +1,32 @@
+2026-10-07 09:00:01 INFO  [main] 应用启动完成, version=2.3.1, pid=2841
+2026-10-07 09:00:02 INFO  [main] 加载配置文件 config/app.yaml 成功
+2026-10-07 09:00:03 DEBUG [pool-1] 建立数据库连接 jdbc:mysql://10.2.3.41:3306/order_db
+2026-10-07 09:00:04 INFO  [pool-1] 连接池初始化完成, size=20
+2026-10-07 09:01:12 INFO  [http-8080-1] GET /api/order/list 200 耗时 43ms
+2026-10-07 09:01:44 WARN  [http-8080-2] 响应超时预警: /api/order/detail 耗时 1850ms
+2026-10-07 09:02:03 ERROR [http-8080-3] 查询订单失败 orderId=88231: Connection timed out after 30000 ms
+2026-10-07 09:02:04 ERROR [http-8080-3] 查询订单失败 orderId=88232: Connection timed out after 30000 ms
+2026-10-07 09:02:05 ERROR [http-8080-4] 查询订单失败 orderId=88517: Connection timed out after 30000 ms
+2026-10-07 09:02:31 INFO  [http-8080-5] GET /api/user/profile 200 耗时 12ms
+2026-10-07 09:03:10 WARN  [pool-1] 连接池使用率 88%, 接近上限
+2026-10-07 09:03:52 ERROR [pool-1] 获取数据库连接失败: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out
+2026-10-07 09:03:52 ERROR [pool-1] 获取数据库连接失败: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out
+2026-10-07 09:04:15 ERROR [http-8080-6] 反序列化请求体失败: com.fasterxml.jackson.core.JsonParseException: Unexpected character ('}' (code 125))
+2026-10-07 09:04:16 INFO  [http-8080-6] 已返回 400 给客户端
+2026-10-07 09:05:00 INFO  [sched-1] 开始执行定时对账任务
+2026-10-07 09:05:22 ERROR [sched-1] 对账任务执行失败 batchId=20261007-001: NullPointerException at OrderService.reconcile(OrderService.java:184)
+2026-10-07 09:05:23 ERROR [sched-1] 对账任务执行失败 batchId=20261007-002: NullPointerException at OrderService.reconcile(OrderService.java:184)
+2026-10-07 09:05:24 ERROR [sched-1] 对账任务执行失败 batchId=20261007-003: NullPointerException at OrderService.reconcile(OrderService.java:184)
+2026-10-07 09:05:25 ERROR [sched-1] 对账任务执行失败 batchId=20261007-004: NullPointerException at OrderService.reconcile(OrderService.java:184)
+2026-10-07 09:06:02 WARN  [http-8080-7] 用户登录失败 3 次, ip=172.16.8.90
+2026-10-07 09:06:40 INFO  [http-8080-8] POST /api/order/create 201 耗时 96ms
+2026-10-07 09:07:11 DEBUG [pool-1] 空闲连接回收, active=4, idle=16
+2026-10-07 09:07:55 ERROR [http-8080-9] 调用支付网关失败 traceId=a3f9c1d8e77b4f02: HTTP 502 Bad Gateway
+2026-10-07 09:08:20 ERROR [http-8080-9] 调用支付网关失败 traceId=b7e2a9f0c31d8e55: HTTP 502 Bad Gateway
+2026-10-07 09:08:44 ERROR [http-8080-10] 调用支付网关失败 traceId=c91d4b70aa23f18c: HTTP 502 Bad Gateway
+2026-10-07 09:09:31 INFO  [sched-1] 定时任务下一轮触发时间 2026-10-07 10:05:00
+2026-10-07 09:10:02 WARN  [http-8080-11] 请求参数校验失败: mobile 格式不正确
+2026-10-07 09:10:48 INFO  [http-8080-12] GET /api/health 200 耗时 3ms
+2026-10-07 09:11:19 ERROR [pool-1] 数据库连接池耗尽, 等待队列长度=37
+2026-10-07 09:11:20 FATAL [main] 健康检查连续失败 5 次, 触发熔断
+2026-10-07 09:11:21 INFO  [main] 开始执行优雅停机流程
